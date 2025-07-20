@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "jest",
-    "start" : "nodemon app.js"
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -23,10 +23,10 @@
     "supertest": "^6.3.3"
   },
   "dependencies": {
-    "nodemon": "^3.0.1",
+    "cowsay": "^1.6.0",
     "dotenv": "^17.2.0",
     "express": "^5.1.0",
-    "mongoose": "^8.16.4",
+    "nodemon": "^3.0.1",
     "pg": "^8.16.3"
   }
 }
