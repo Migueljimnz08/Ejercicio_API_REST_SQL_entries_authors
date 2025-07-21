@@ -4,7 +4,7 @@ En este ejercicio vamos a trabajar con una base de datos relacional a través de
 
 A continuación tienes las queries necesarias para el ejercicio, tendrás que ejecutarlas en pgAdmin 4 para crear las tablas e introducir los datos en ellas
 
-[Fichero queries SQL](https://github.com/TheBridge-FullStackDeveloper/temario_fullstack_FT_sep23_MAD/blob/master/utils/ejercicioSQL/queries.sql)
+[Fichero queries SQL](./queries.sql)
 
 
 ## Tareas a realizar
@@ -13,7 +13,8 @@ A continuación tienes las queries necesarias para el ejercicio, tendrás que ej
 
 - Después, completamos la API con las siguientes rutas para entries:
 
-    - [GET] http://localhost:3000/api/entries
+    - [GET] http://localhost:3000/api/entries Retorna todas las entries
+    - [GET] http://localhost:3000/api/entries?email=alejandru@thebridgeschool.es Retorna un objeto con las entries del autor buscado.
 
     #### Modificar la query SQL para que me devuelva una respuesta con los datos del autor y sin ID de la entry:
 
@@ -25,6 +26,7 @@ A continuación tienes las queries necesarias para el ejercicio, tendrás que ej
 "category": "sucesos",
 "name": "Alejandru",
 "surname": "Regex",
+"email_author":"alejandru@thebridgeschool.es"
 "image": "https://randomuser.me/api/portraits/thumb/men/75.jpg"
 }
 ```
@@ -36,7 +38,7 @@ En vez de esta respuesta, que es la que está ahora:
 "title": "Noticia: Un panda suelto por la ciudad",
 "content": "El panda se comió todas las frutas de una tienda",
 "date": "2022-03-15T23:00:00.000Z",
-"email_author":"alvaru@thebridgeschool.es"
+"id_author": 1,
 "category": "Sucesos"
 }
 ```
