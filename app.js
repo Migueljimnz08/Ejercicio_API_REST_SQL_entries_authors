@@ -8,6 +8,7 @@ require('dotenv').config()
 
 // Rutas
 const entriesRoutes = require('./routes/entries.routes');
+const authorsRoutes = require('./routes/authors.routes');
 
 app.use(express.json());
 
@@ -17,7 +18,8 @@ app.get('/', (req, res) => {
 
 // Rutas
 //API
-app.use('/api', entriesRoutes);
+app.use('/api/entries', entriesRoutes);
+app.use('/api/authors', authorsRoutes);
 
 app.listen(port, () => {
   console.log(

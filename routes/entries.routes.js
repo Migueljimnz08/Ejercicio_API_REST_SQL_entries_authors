@@ -4,19 +4,16 @@ const entriesController = require('../controllers/entries.controller');
 const router = express.Router();
 
 // GET
-router.get('/entries{/:email}', entriesController.getEntries);
-router.get('/authors{/:email}', entriesController.getAuthors);
+router.get('/{:email}', entriesController.getEntries);
 
 // CREATE
-router.post('/entries', entriesController.createEntry);
-router.post('/authors', entriesController.createAuthor);
+router.post('/', entriesController.createEntry);
 
 // UPDATE
-router.put('/entries', entriesController.updateEntry);
-router.put('/authors', entriesController.updateAuthor);
+router.put('/', entriesController.updateEntry);
 
 // DELETE
-router.delete('/entries', entriesController.deleteEntry);
-router.delete('/authors', entriesController.deleteAuthor);
+router.delete('/', entriesController.deleteEntry);
+
 
 module.exports = router;
